@@ -9,8 +9,8 @@ import (
 	"io/ioutil"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/spf13/cobra"
 	protomessage "github.com/open-telemetry/opentelemetry-proto/gen/go/collector/metrics/v1"
+	"github.com/spf13/cobra"
 )
 
 // decodeCmd represents the decode command
@@ -33,12 +33,12 @@ cwmetricdecode decode ./test/data/MetricStreams-QuickFull-k2WzmU-ZRJgfgu7`,
 		if err != nil {
 			fmt.Printf("Error reading file contents:  %v\n", err)
 		}
-		fmt.Printf("Content length of file is %d\n",len(contents))
+		fmt.Printf("Content length of file is %d\n", len(contents))
 
 		err = deserialize(contents)
 		if err != nil {
 			fmt.Printf("Error decoding file contents:  %v\n", err)
-		}		
+		}
 
 	},
 }
